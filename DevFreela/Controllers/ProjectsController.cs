@@ -60,5 +60,12 @@ namespace DevFreela.Controllers
            
             return NoContent();
         }
+
+        [HttpPut("{id}/finish")]
+        public IActionResult finish(int id)
+        {
+
+            return NoContent();
+        }
     }
 }
