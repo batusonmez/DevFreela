@@ -1,3 +1,5 @@
+using DevFreela.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,6 +9,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Configuring OppenginTime
+
+builder.Services.Configure<OppeningTimeOption>(builder.Configuration.GetSection("OppeningTime"));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
